@@ -32,7 +32,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-        <NavWrapper />
+        <NavWrapper names={this.state.names}/>
           
           
         </header>
