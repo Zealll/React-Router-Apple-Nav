@@ -1,15 +1,15 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 function Mac(props) {
     return (
         <div className='allItems'>
             {props.content.map(eachContent => (
             <div  className='individualIcon'>
-               <div>
+            <Link exact to={`/mac/${eachContent.name}`}>
                <img src={eachContent.icon} alt='sdfsf' />
-                <p>{eachContent.name}</p>
-               </div>
-                
+                <p>{eachContent.name}</p>   
+            </Link>             
             </div>
 
             ))}

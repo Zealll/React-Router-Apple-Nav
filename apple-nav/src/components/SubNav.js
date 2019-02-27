@@ -9,22 +9,21 @@ import Music from './Displays/Music'
 import Support from './Displays/Support'
 
 function SubNav(props) {
-    console.log(props.mac)
     return(
         <div className='subNav'>
-            <Route exact path='/mac' 
+            <Route path='/mac' 
             render={() => <Mac content={props.mac} />} />
-            <Route exact path='/ipad' 
+            <Route path='/ipad' 
             render={() => <Ipad content={props.ipad} />} />
-            <Route exact path='/iphone' 
+            <Route path='/iphone' 
             render={() => <Iphone content={props.iphone} />} />
-            <Route exact path='/watch' 
+            <Route path='/watch' 
             render={() => <Watch content={props.watch} />} />
-            <Route exact path='/tv' 
+            <Route path='/tv' 
             render={() => <Tv content={props.tv} />} />
-            <Route exact path='/music' 
+            <Route path='/music' 
             render={() => <Music content={props.music} />} />
-            <Route exact path='/support' 
+            <Route path='/support' 
             render={() => <Support content={props.support} />} />
         </div>
     )
