@@ -14,17 +14,43 @@
   display: flex;
   margin: 0 auto;
 } 
-.name{
+p{
   margin: 0 40px;
   color: white;
   cursor: pointer;
 }
 
-.name:hover {
+p:hover {
   color: rgb(128, 127, 127)
 }
 
 
+
+.allItems {
+  display: flex;
+  align-items: center;
+  width: 1100px;
+  margin: 20px auto;
+}
+
+.individualIcon {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 15px;
+}
+
+.individualIcon p {
+  margin: 0;
+  color: black;
+  font-size: 0.8rem;
+}
+img {
+  width: 60px;
+  height: 70px;
+  cursor: pointer;
+  filter: brightness(10%)
+}
 
 /* .App-header {
   background-color: #282c34;

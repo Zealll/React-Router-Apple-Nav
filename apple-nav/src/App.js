@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
 import NavWrapper from './components/NavWrapper'
-import { navNames, macData, ipadData, iphoneData, watchData, tvData, musicData} from './AppleIconsData'
+import SubNav from './components/SubNav'
+import { macData, ipadData, iphoneData, watchData, tvData, musicData} from './AppleIconsData'
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      names: [],
       mac: [],
       ipad: [],
       iphone: [],  
@@ -18,7 +18,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.setState ({names: navNames})
     this.setState ({mac: macData})
     this.setState ({ipad: ipadData})
     this.setState ({iphone: iphoneData})
@@ -33,7 +32,14 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
         <NavWrapper names={this.state.names}/>
-          
+        <SubNav 
+        mac={this.state.mac} 
+        ipad={this.state.ipad} 
+        iphone={this.state.iphone}
+        watch={this.state.watch}
+        tv={this.state.tv}
+        music={this.state.music}
+        />
           
         </header>
       </div>
